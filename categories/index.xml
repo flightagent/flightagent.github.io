@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Flight Agent</title>
+    <link>https://flightagent.github.io/categories/</link>
+    <description>Recent content in Categories on Flight Agent</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Dec 2020 15:55:43 +0600</lastBuildDate><atom:link href="https://flightagent.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hardware</title>
+      <link>https://flightagent.github.io/categories/hardware/</link>
+      <pubDate>Fri, 18 Dec 2020 15:55:43 +0600</pubDate>
+      
+      <guid>https://flightagent.github.io/categories/hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Config</title>
+      <link>https://flightagent.github.io/categories/config/</link>
+      <pubDate>Thu, 17 Dec 2020 15:55:43 +0600</pubDate>
+      
+      <guid>https://flightagent.github.io/categories/config/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testers</title>
+      <link>https://flightagent.github.io/categories/testers/</link>
+      <pubDate>Thu, 17 Dec 2020 15:45:43 +0600</pubDate>
+      
+      <guid>https://flightagent.github.io/categories/testers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quick off</title>
+      <link>https://flightagent.github.io/categories/quick-off/</link>
+      <pubDate>Thu, 17 Dec 2020 15:28:43 +0600</pubDate>
+      
+      <guid>https://flightagent.github.io/categories/quick-off/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
