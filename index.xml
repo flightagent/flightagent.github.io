@@ -99,6 +99,17 @@
     </item>
     
     <item>
+      <title>Mobile app</title>
+      <link>https://flightagent.github.io/famobile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://flightagent.github.io/famobile/</guid>
+      <description>Android app Application to control remotely FlightAgent.
+Options:
+ Shows a moving map in thwe main page.</description>
+    </item>
+    
+    <item>
       <title>Moving map</title>
       <link>https://flightagent.github.io/moving-map/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
