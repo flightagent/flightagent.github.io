@@ -9,56 +9,93 @@
     <lastBuildDate>Fri, 18 Dec 2020 15:55:43 +0600</lastBuildDate><atom:link href="https://flightagent.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>External mini screens for compass and yaw damper</title>
-      <link>https://flightagent.github.io/blog/blog-post-4/</link>
+      <link>https://flightagent.github.io/blog/mini-screens/</link>
       <pubDate>Fri, 18 Dec 2020 15:55:43 +0600</pubDate>
       
-      <guid>https://flightagent.github.io/blog/blog-post-4/</guid>
+      <guid>https://flightagent.github.io/blog/mini-screens/</guid>
       <description>Compass and yaw damper Compass and yaw damper in external 1.</description>
     </item>
     
     <item>
       <title>FA ShowTV</title>
-      <link>https://flightagent.github.io/blog/blog-post-6/</link>
+      <link>https://flightagent.github.io/blog/showtv/</link>
       <pubDate>Fri, 18 Dec 2020 13:50:43 +0600</pubDate>
       
-      <guid>https://flightagent.github.io/blog/blog-post-6/</guid>
+      <guid>https://flightagent.github.io/blog/showtv/</guid>
       <description>Flight Agent remote application This remote app can be installer on a Google TV (xiaomi TV, etc&amp;hellip;) and see the map and cameras on the sim.</description>
     </item>
     
     <item>
       <title>Remote android application</title>
-      <link>https://flightagent.github.io/blog/blog-post-5/</link>
+      <link>https://flightagent.github.io/blog/mobile-app/</link>
       <pubDate>Fri, 18 Dec 2020 13:38:43 +0600</pubDate>
       
-      <guid>https://flightagent.github.io/blog/blog-post-5/</guid>
+      <guid>https://flightagent.github.io/blog/mobile-app/</guid>
       <description>Flight Agent remote application Application to control remotely the simulator and cockpit around it.</description>
     </item>
     
     <item>
       <title>NASA Desktop wallpaper changer</title>
-      <link>https://flightagent.github.io/blog/blog-post-3/</link>
+      <link>https://flightagent.github.io/blog/wallpaper/</link>
       <pubDate>Thu, 17 Dec 2020 15:55:43 +0600</pubDate>
       
-      <guid>https://flightagent.github.io/blog/blog-post-3/</guid>
+      <guid>https://flightagent.github.io/blog/wallpaper/</guid>
       <description>NASA desktop walppaper changer !! In the modules section of config.</description>
     </item>
     
     <item>
       <title>Testers needed !</title>
-      <link>https://flightagent.github.io/blog/blog-post-2/</link>
+      <link>https://flightagent.github.io/blog/testers/</link>
       <pubDate>Thu, 17 Dec 2020 15:45:43 +0600</pubDate>
       
-      <guid>https://flightagent.github.io/blog/blog-post-2/</guid>
+      <guid>https://flightagent.github.io/blog/testers/</guid>
       <description>Looking for testers !! We are looking for testers of the application.</description>
     </item>
     
     <item>
       <title>Creation of project</title>
-      <link>https://flightagent.github.io/blog/blog-post/</link>
+      <link>https://flightagent.github.io/blog/first-entrance/</link>
       <pubDate>Thu, 17 Dec 2020 15:28:43 +0600</pubDate>
       
-      <guid>https://flightagent.github.io/blog/blog-post/</guid>
+      <guid>https://flightagent.github.io/blog/first-entrance/</guid>
       <description>Web page created ! We are happy to announce that this site is created and try to offering a simple solution to sim enhancement.</description>
+    </item>
+    
+    <item>
+      <title>Backups</title>
+      <link>https://flightagent.github.io/backups/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://flightagent.github.io/backups/</guid>
+      <description>FlightAgent can make backups of configuration files from:
+ Microsoft Flight Simulator FSUIPC Prosim P3D  Just open this from the machine that Flight Agent is running Backup and will download a zip file.</description>
+    </item>
+    
+    <item>
+      <title>Customizable</title>
+      <link>https://flightagent.github.io/extensibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://flightagent.github.io/extensibility/</guid>
+      <description>FlightAgent is an open platform Can be configured to take an actions when an event is fired.</description>
+    </item>
+    
+    <item>
+      <title>Hardware extension</title>
+      <link>https://flightagent.github.io/hardware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://flightagent.github.io/hardware/</guid>
+      <description>Introduction  These are the possibilities of hardware extension for FlightAgent.</description>
+    </item>
+    
+    <item>
+      <title>Moving map</title>
+      <link>https://flightagent.github.io/moving-map/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://flightagent.github.io/moving-map/</guid>
+      <description>A web page can be opened to show a map of the plane to easily locate the plane.</description>
     </item>
     
   </channel>

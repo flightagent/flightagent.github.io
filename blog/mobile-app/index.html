@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Flight Agent web page">
+  <meta name="description" content="android remote applciation to control simulator">
   
   <meta name="author" content="Themefisher">
   <meta name="generator" content="Hugo 0.79.0" />
@@ -83,7 +83,7 @@
     <div class="row justify-content-center">
       <div class="col-lg-9 col-md-12 col-12 ">
         <div class="page-banner-content text-center">
-          <h1 class="display-4 font-weight-bold mb-2">compass</h1>
+          <h1 class="display-4 font-weight-bold mb-2">Remote android application</h1>
         </div>
       </div>
     </div>
@@ -95,39 +95,90 @@
     <div class="row">
       <div class="col-lg-8">
         <div class="row">
-          
-          
-          <div class="col-sm-6">
-            <div class="blog-item card mb-4 border-0">
-  <img src="/images/blog/compass-blog.png" alt="External mini screens for compass and yaw damper" class="img-fluid w-100">
-  <div class="blog-item-content p-4">
-    <div class="blog-meta mb-2">
-      <span><i class="ti-time mr-2"></i>18 Dec, 2020</span> <i class="ti-user ml-2"></i>
-      Flightagent
-    </div>
-    <h4 class="mt-2 mb-3"><a href="https://flightagent.github.io/blog/mini-screens/">External mini screens for compass and yaw damper</a></h4>
-  </div>
-</div>
-          </div>
-          
-          <div class="col-sm-6">
-            <div class="blog-item card mb-4 border-0">
-  <img src="/images/blog/remote-blog.png" alt="Remote android application" class="img-fluid w-100">
-  <div class="blog-item-content p-4">
-    <div class="blog-meta mb-2">
-      <span><i class="ti-time mr-2"></i>18 Dec, 2020</span> <i class="ti-user ml-2"></i>
-      Flightagent
-    </div>
-    <h4 class="mt-2 mb-3"><a href="https://flightagent.github.io/blog/mobile-app/">Remote android application</a></h4>
-  </div>
-</div>
-          </div>
-          
-        </div>
-        <div class="pagination mt-5 pt-4">
-          
+          <div class="col-lg-12 mb-5">
+            <div class="single-blog-item ">
+              <img src="/images/blog/remote-blog.png" alt="Remote android application" class="img-fluid w-100">
+              <div class="blog-item-meta mt-4 mb-3">
+                <span class="text-black mr-4"><i class="ti-time mr-1"></i> December 18, 2020</span>
+                <span class="text-black mr-3">by flightagent</span>
+              </div>
+              <h2 id="flight-agent-remote-application">Flight Agent remote application</h2>
+<p>Application to control remotely the simulator and cockpit around it.
+Application can share with a QR a public URL with the current flight, to share it to customers.</p>
+<p><img src="/images/blog/remote-1.png" alt="Main view"> <img src="/images/blog/remote-2.png" alt="Configuration"> <img src="/images/blog/remote-3.png" alt="Flight settings"> <img src="/images/blog/remote-4.png" alt="Sessions"></p>
+<p>Configuration inside modules:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#f92672">temperatures</span>:
+    - <span style="color:#f92672">temperature</span>:
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">&lt;name&gt;</span>
+      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://&lt;api&gt;:8080/api/v1/weather</span>
+    - <span style="color:#f92672">temperature</span>:
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">&lt;name&gt;</span>
+      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://&lt;ip&gt;:8080/api/v1/weather</span>
 
-
+  <span style="color:#f92672">famobile</span>:
+    <span style="color:#f92672">failures</span>:
+      - <span style="color:#f92672">failure</span>:
+        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Master off</span>
+        <span style="color:#f92672">event</span>: <span style="color:#ae81ff">setsimvar/master=0</span>
+      - <span style="color:#f92672">failure</span>:
+        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Mixture off</span>
+        <span style="color:#f92672">event</span>: <span style="color:#ae81ff">setsimvar/mixture=0</span>
+      - <span style="color:#f92672">failure</span>:
+        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Left tank empty</span>
+        <span style="color:#f92672">event</span>: <span style="color:#ae81ff">setsimvar/lefttank=0</span>
+      - <span style="color:#f92672">failure</span>:
+        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Right tank empty</span>
+        <span style="color:#f92672">event</span>: <span style="color:#ae81ff">setsimvar/righttank=0</span>
+      - <span style="color:#f92672">failure</span>:
+        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Left tank Full</span>
+        <span style="color:#f92672">event</span>: <span style="color:#ae81ff">setsimvar/lefttank=80</span>
+      - <span style="color:#f92672">failure</span>:
+        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Right tank Full</span>
+        <span style="color:#f92672">event</span>: <span style="color:#ae81ff">setsimvar/righttank=80</span>
+    <span style="color:#f92672">messages</span>:
+      - <span style="color:#f92672">message</span>:
+        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Takeoff rnw12</span>
+        <span style="color:#f92672">event</span>: <span style="color:#ae81ff">Despegue por la 12</span>
+      - <span style="color:#f92672">message</span>:
+        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Land rnw12</span>
+        <span style="color:#f92672">event</span>: <span style="color:#ae81ff">Aterrize por la 12</span>
+    <span style="color:#f92672">views</span>:
+      - <span style="color:#f92672">view</span>:
+        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">internal</span>
+        <span style="color:#f92672">event</span>: <span style="color:#ae81ff">viewinternal</span>
+      - <span style="color:#f92672">view</span>:
+        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">external</span>
+        <span style="color:#f92672">event</span>: <span style="color:#ae81ff">viewexternal</span>
+    <span style="color:#f92672">cloudserver</span>:
+      <span style="color:#f92672">ip</span>: <span style="color:#ae81ff">&lt;ip server&gt;</span>
+      <span style="color:#f92672">apikey</span>: <span style="color:#ae81ff">&lt;apikey&gt;</span>
+    <span style="color:#f92672">mumbleserver</span>:
+      <span style="color:#f92672">ip</span>: <span style="color:#ae81ff">&lt;ip&gt;</span>
+      <span style="color:#f92672">port</span>: <span style="color:#ae81ff">64738</span>
+      <span style="color:#f92672">username</span>: <span style="color:#ae81ff">fagent</span>
+    <span style="color:#f92672">cameras</span>:
+      - <span style="color:#ae81ff">rtsp://&lt;ip 1&gt;:8554/stream</span>
+      - <span style="color:#ae81ff">rtsp://&lt;ip 2&gt;:8554/stream</span>
+      - <span style="color:#ae81ff">... other </span>
+</code></pre></div>
+            </div>
+          </div>
+          <div class="col-lg-12 mb-5">
+            <ul class="list-inline share">
+              <li class="lis-inline-item">
+                <h4>Share now :</h4>
+              </li>
+              
+              <li class="list-inline-item mb-2 mb-lg-0"><a href="#" target="_blank"><i class="ti-facebook mr-2" aria-hidden="true"></i></a></li>
+              
+              <li class="list-inline-item mb-2 mb-lg-0"><a href="#" target="_blank"><i class="ti-twitter-alt mr-2" aria-hidden="true"></i></a></li>
+              
+              <li class="list-inline-item mb-2 mb-lg-0"><a href="#" target="_blank"><i class="ti-linkedin mr-2" aria-hidden="true"></i></a></li>
+              
+              <li class="list-inline-item mb-2 mb-lg-0"><a href="#" target="_blank"><i class="ti-github mr-2" aria-hidden="true"></i></a></li>
+              
+            </ul>
+          </div>
         </div>
       </div>
       <div class="col-lg-4">
