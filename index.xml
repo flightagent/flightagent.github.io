@@ -72,6 +72,15 @@
     </item>
     
     <item>
+      <title>Creating panels</title>
+      <link>https://flightagent.github.io/create-panel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://flightagent.github.io/create-panel/</guid>
+      <description>Creating gauges Use Flight Agent yaml format to define gauge and generate svg from there.</description>
+    </item>
+    
+    <item>
       <title>Customizable</title>
       <link>https://flightagent.github.io/extensibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
