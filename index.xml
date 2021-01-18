@@ -95,7 +95,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://flightagent.github.io/downloads/</guid>
-      <description>Latest version  Microsoft Flight Simulator 2020 64b/ Prepar3D 64b Microsoft Flight Simulator X 32b / Prepar3D 32b Linux Rpi 1 arm5 Rpi 2-3-4 arm6 Darwin  Old versions  Non for now  </description>
+      <description>Latest version  Microsoft Flight Simulator 2020 64b/ Prepar3D 64b Microsoft Flight Simulator X 32b / Prepar3D 32b Linux Rpi 1 arm5 Rpi 2-3-4 arm6 Darwin  Old versions  Non for now, still alpha versions  Linux install chmod +x fagent No need to run sudo, unless more hwd info can be obtained to make a better inventory or running some hardware.</description>
     </item>
     
     <item>
