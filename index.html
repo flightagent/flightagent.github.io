@@ -1,612 +1,197 @@
 <!DOCTYPE html>
-<html lang="en-us"><head>
-  <meta charset="utf-8">
-  <title>Flight Agent</title>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Flight Agent | Elevate Your Flight Simulation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Flight Agent utility for flight simulators MSFS, FSX, P3D, and X-Plane. Extend your cockpit with ease.">
+    <meta name="author" content="Flight Agent Team">
 
-  <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Flight Agent utility for flight simulators MSFS FSX P3D Xplane">
-  
-  <meta name="author" content="Themefisher">
-  <meta name="generator" content="Hugo 0.79.0" />
-
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PS1WP2MK3Y"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PS1WP2MK3Y');
-</script>
-
-  <!-- plugins -->
-  
-  <link rel="stylesheet" href="https://flightagent.github.io/plugins/bootstrap/bootstrap.min.css ">
-  
-  <link rel="stylesheet" href="https://flightagent.github.io/plugins/slick/slick.css ">
-  
-  <link rel="stylesheet" href="https://flightagent.github.io/plugins/themify-icons/themify-icons.css ">
-  
-  <link rel="stylesheet" href="https://flightagent.github.io/plugins/magnific-popup/magnific-popup.css ">
-  
-
-  <!-- Main Stylesheet -->
-  
-  <link rel="stylesheet" href="https://flightagent.github.io/scss/style.min.css" media="screen">
-
-  <!--Favicon-->
-  <link rel="shortcut icon" href="https://flightagent.github.io/images/favicon.png " type="image/x-icon">
-  <link rel="icon" href="https://flightagent.github.io/images/favicon.png " type="image/x-icon">
-
-</head><body>
-<div class="preloader">
-  
-</div>
-<div class="main-navigation fixed-top site-header" id="mainmenu-area">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://flightagent.github.io/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="css/style.css">
     
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container align-items-center">
-            <a class="navbar-brand" href="https://flightagent.github.io">
-            
-              
-            
-            <h2 class="mb-0 text-color"><img src="https://flightagent.github.io/images/logo.png" alt="Flight Agent"/>Flight Agent</h2>
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="ti-menu-alt"></span>
-      </button>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
-            
-            <div class="collapse navbar-collapse text-center text-lg-left" id="navbarmain">
-                
-                <ul class="navbar-nav ml-auto">
-                     
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="#book">About</a>
-                    </li>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PS1WP2MK3Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PS1WP2MK3Y');
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="Flight Agent Logo">
+                    <span>Flight Agent</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#install">Install</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#install" class="btn btn-outline" style="padding: 0.5rem 1rem;">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero reveal">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Elevate Your Cockpit Experience</h1>
+                    <p>Flight Agent is the ultimate companion for flight simulators. Display instrument panels, manage moving maps, and control hardware with zero configuration.</p>
+                    <div class="btn-group">
+                        <a href="#install" class="btn btn-primary">Download Now</a>
+                        <a href="#about" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section with Gifs -->
+        <section id="about" class="section reveal">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-m);">
+                    <div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Beyond Simulation</h2>
+                        <p style="color: var(--text-muted); margin-bottom: 2rem;">Seamlessly extend your simulator to any device. Run high-fidelity instruments on your tablet or secondary monitors with minimal CPU impact.</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <img src="images/about/compass.gif" alt="Compass" style="width: 100%; border-radius: 12px; border: 1px solid var(--glass-border);">
+                            <img src="images/about/map.gif" alt="Moving Map" style="width: 100%; border-radius: 12px; border: 1px solid var(--glass-border);">
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center; gap: 1rem;">
+                        <img src="images/about/adf.png" alt="ADF" style="width: 100%; border-radius: 12px; border: 1px solid var(--glass-border);">
+                        <img src="images/about/vs.gif" alt="Vertical Speed" style="width: 100%; border-radius: 12px; border: 1px solid var(--glass-border);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: var(--space-l);" class="reveal">
+                    <h2 style="font-size: 3rem;">Powerful Features</h2>
+                    <p style="color: var(--text-muted);">Everything you need for a professional flight setup.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card reveal">
+                        <i class="ti-world"></i>
+                        <h3>Web Based</h3>
+                        <p>Run it on any modern browser: Android, RPi, Windows, Linux, or iPad.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <i class="ti-pulse"></i>
+                        <h3>Low Footprint</h3>
+                        <p>Uses only 10Mb of RAM and <0.5% CPU. Optimized for Raspberry Pi 4.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <i class="ti-mobile"></i>
+                        <h3>Mobile Remote</h3>
+                        <p>Control the simulator, set failures, and manage events from your phone.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <i class="ti-map"></i>
+                        <h3>Moving Map</h3>
+                        <p>Real-time airplane position tracking with OpenStreetMap integration.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <i class="ti-hummer"></i>
+                        <h3>Cockpit Hardware</h3>
+                        <p>Directly connect pedals, throttles, and custom buttons to your system.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <i class="ti-package"></i>
+                        <h3>Zero Install</h3>
+                        <p>One single executable. Download and run – no complex setup required.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation Section -->
+        <section id="install" class="section reveal">
+            <div class="container">
+                <div class="install-section">
+                    <h2 style="margin-bottom: var(--space-m); text-align: center;">Quick Installation</h2>
                     
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="#chapter">Get started</a>
-                    </li>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-m);">
+                        <div>
+                            <h4>Windows (PowerShell)</h4>
+                            <div class="code-container">
+                                <code id="win-cmd">irm https://raw.githubusercontent.com/flightagent/fagent/main/scripts/install.ps1 | iex</code>
+                                <button class="copy-btn" onclick="copyToClipboard('win-cmd')"><i class="ti-clipboard"></i></button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Linux / macOS (Bash)</h4>
+                            <div class="code-container">
+                                <code id="nix-cmd">curl -fsSL https://raw.githubusercontent.com/flightagent/fagent/main/scripts/install.sh | bash</code>
+                                <button class="copy-btn" onclick="copyToClipboard('nix-cmd')"><i class="ti-clipboard"></i></button>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="#blog">Blog</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="#contact">Contact</a>
-                    </li>
-                      
+                    <div style="margin-top: var(--space-m); text-align: center;">
+                        <p>Or download the <a href="https://github.com/flightagent/releases/releases/latest/download/fagent-win.exe" style="color: var(--accent);">Windows Executable</a> directly.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
-</div>
+        </section>
 
-
-
-
-
-
-
-<section class="section" id="book">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5">
-        <div class="book-preview">
-          
-          <div class="book-pages">
-            
-            <div class="item">
-              <img src="/images/about/compass.gif" alt="page-preview" class="img-fluid">
-              <div class="overlay">
-                <a href="/images/about/compass.gif" class="popup-gallery img-fluid" data-title="Preview"><i
-                    class="ti-fullscreen"></i></a>
-              </div>
+        <!-- News Section -->
+        <section id="news" class="section">
+            <div class="container">
+                <h2 style="margin-bottom: var(--space-m);" class="reveal">Latest News</h2>
+                <div class="features-grid">
+                    <div class="feature-card reveal">
+                        <img src="images/blog/compass-blog.png" alt="Mini Screens" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                        <h3>External Mini Screens</h3>
+                        <p>Support for compass and yaw damper displays on external hardware.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <img src="images/blog/blog1.jpg" alt="ShowTV" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                        <h3>FA ShowTV</h3>
+                        <p>Broadcast your simulator data to smart TVs and larger screens.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <img src="images/blog/remote-blog.png" alt="Remote App" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                        <h3>Remote Android App</h3>
+                        <p>Experience full control with our native Android remote application.</p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="item">
-              <img src="/images/about/map.gif" alt="page-preview" class="img-fluid">
-              <div class="overlay">
-                <a href="/images/about/map.gif" class="popup-gallery img-fluid" data-title="Preview"><i
-                    class="ti-fullscreen"></i></a>
-              </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section reveal">
+            <div class="container" style="text-align: center;">
+                <h2>Get In Touch</h2>
+                <p style="color: var(--text-muted); margin-bottom: var(--space-m);">Questions? Feedback? We'd love to hear from you.</p>
+                <a href="mailto:flightagent.pro@gmail.com" class="btn btn-primary">Email Us</a>
             </div>
-            
-            <div class="item">
-              <img src="/images/about/adf.png" alt="page-preview" class="img-fluid">
-              <div class="overlay">
-                <a href="/images/about/adf.png" class="popup-gallery img-fluid" data-title="Preview"><i
-                    class="ti-fullscreen"></i></a>
-              </div>
-            </div>
-            
-            <div class="item">
-              <img src="/images/about/vs.gif" alt="page-preview" class="img-fluid">
-              <div class="overlay">
-                <a href="/images/about/vs.gif" class="popup-gallery img-fluid" data-title="Preview"><i
-                    class="ti-fullscreen"></i></a>
-              </div>
-            </div>
-            
-          </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Copyright &copy; 2026 Flight Agent. All Rights Reserved.</p>
         </div>
-      </div>
+    </footer>
 
-      <div class="col-lg-6">
-        <div class="section-heading book-info mt-5 mt-lg-0">
-          <h2 class="text-lg mb-4">About</h2>
-          Flight Agent is an application to extent flight simulators. Show panel instruments, show a moving map, control leds, buttons and screens, &hellip;
-
-          <ul class="list-unstyled mt-4 mb-5">
-            
-          </ul>
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<section class="pt-4 section-bottom" id="service">
-  <div class="container">
-    <div class="row align-items-center">
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        
-        <div class="service-block mb-4 mb-lg-0">
-          <i class="ti-world text-danger"></i>
-          <h4 class="mb-3 mt-4">Web based</h4>
-          <p class="mb-0">Run it on any modern browser, android, rpi, windows, linux, iPad, &hellip;</p>
-        </div>
-          
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        
-        <div class="service-block mb-4 mb-lg-0">
-          <i class="ti-pulse text-danger"></i>
-          <h4 class="mb-3 mt-4">Low CPU &amp; RAM</h4>
-          <p class="mb-0">Server app uses 10Mb of RAM and CPU bellow 0.5%. Web on Rpi 4 using 20% cpu for a complet cockpit</p>
-        </div>
-          
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        
-        <div class="service-block mb-4 mb-lg-0">
-          <i class="ti-calendar text-danger"></i>
-          <h4 class="mb-3 mt-4">Professional use</h4>
-          <p class="mb-0">Session management for professional simulator, contact <a href="mailto:flightagent.pro@gmail.com">flightagent.pro@gmail.com</a></p>
-        </div>
-          
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        
-        <a href="/famobile">
-          
-        <div class="service-block mb-4 mb-lg-0">
-          <i class="ti-mobile text-danger"></i>
-          <h4 class="mb-3 mt-4">Mobile remote application</h4>
-          <p class="mb-0">Control the simulator from your mobile. Set failures, &hellip;</p>
-        </div>
-        
-        </a>
-          
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        
-        <a href="/create-panel">
-          
-        <div class="service-block mb-4 mb-lg-0">
-          <i class="ti-ruler-pencil text-danger"></i>
-          <h4 class="mb-3 mt-4">Custom instruments</h4>
-          <p class="mb-0">Create your own instruments</p>
-        </div>
-        
-        </a>
-          
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        
-        <a href="moving-map">
-          
-        <div class="service-block mb-4 mb-lg-0">
-          <i class="ti-map text-danger"></i>
-          <h4 class="mb-3 mt-4">Moving map</h4>
-          <p class="mb-0">Control ariplane position with OSM maps</p>
-        </div>
-        
-        </a>
-          
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        
-        <div class="service-block mb-4 mb-lg-0">
-          <i class="ti-direction-alt text-danger"></i>
-          <h4 class="mb-3 mt-4">FSX, P3D, MSFS2020</h4>
-          <p class="mb-0">Compatible with Microsoft Flight Simulators</p>
-        </div>
-          
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        
-        <a href="/hardware">
-          
-        <div class="service-block mb-4 mb-lg-0">
-          <i class="ti-hummer text-danger"></i>
-          <h4 class="mb-3 mt-4">Cockpit hardware</h4>
-          <p class="mb-0">Connect hardware to the system</p>
-        </div>
-        
-        </a>
-          
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        
-        <div class="service-block mb-4 mb-lg-0">
-          <i class="ti-package text-danger"></i>
-          <h4 class="mb-3 mt-4">One executable</h4>
-          <p class="mb-0">Download just one exe an execute it</p>
-        </div>
-          
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        
-        <a href="/extensibility">
-          
-        <div class="service-block mb-4 mb-lg-0">
-          <i class="ti-plug text-danger"></i>
-          <h4 class="mb-3 mt-4">Customizable</h4>
-          <p class="mb-0">Easy interact with, events &amp; actions, openAPI, &hellip;</p>
-        </div>
-        
-        </a>
-          
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        
-        <a href="/backups">
-          
-        <div class="service-block mb-4 mb-lg-0">
-          <i class="ti-zip text-danger"></i>
-          <h4 class="mb-3 mt-4">Backups</h4>
-          <p class="mb-0">Easy backups of configuration files, how many times did you lost the sim config?</p>
-        </div>
-        
-        </a>
-          
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        
-        <div class="service-block mb-4 mb-lg-0">
-          <i class="ti-home text-danger"></i>
-          <h4 class="mb-3 mt-4">Multi-platform</h4>
-          <p class="mb-0">The server works on windows, linux, mac</p>
-        </div>
-          
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        
-        <a href="/faq">
-          
-        <div class="service-block mb-4 mb-lg-0">
-          <i class="ti-help text-danger"></i>
-          <h4 class="mb-3 mt-4">FAQ</h4>
-          <p class="mb-0">Look for your problem</p>
-        </div>
-        
-        </a>
-          
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-<section class="section chapter" id="chapter">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="section-heading">
-          <h2 class="text-lg">Get started</h2>
-          <p></p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      
-      <div class="col-sm-6">
-        <div class="chapter-item">
-          <h4><ol>
-<li>Download</li>
-</ol>
-</h4>
-          <p><p>Download latest version:</p>
-<ul>
-<li><a href="https://github.com/flightagent/releases/releases/latest/download/fagent-win.exe">for Microsoft Flight Simulator 2020 windows</a></li>
-<li><a href="/downloads">Others</a></li>
-</ul>
-</p>
-        </div>
-      </div>
-      
-      <div class="col-sm-6">
-        <div class="chapter-item">
-          <h4><ol start="2">
-<li>Execute</li>
-</ol>
-</h4>
-          <p>Execute it. Windows will block the executable, click on &ldquo;more info&rdquo; and execute it</p>
-        </div>
-      </div>
-      
-      <div class="col-sm-6">
-        <div class="chapter-item">
-          <h4><ol start="3">
-<li>Open a web browser</li>
-</ol>
-</h4>
-          <p>From the same computer of the server open http://localhost:8080</p>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-<section class="section bg-grey" id="quick-install">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 text-center">
-        <div class="section-heading">
-          <h2 class="text-lg">Command Line Installation</h2>
-          <p>Install Flight Agent with a single command. This will download the latest version, add it to your PATH, and configure autostart.</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="service-block mb-4">
-          <i class="ti-microsoft text-danger"></i>
-          <h4 class="mb-3 mt-4">Windows (PowerShell)</h4>
-          <div class="code-snippet" style="background: #282c34; color: #abb2bf; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.9rem; position: relative;">
-            <code id="win-cmd">irm https://raw.githubusercontent.com/flightagent/fagent/main/scripts/install.ps1 | iex</code>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="service-block mb-4">
-          <i class="ti-linux text-danger"></i>
-          <h4 class="mb-3 mt-4">Linux / macOS (Bash)</h4>
-          <div class="code-snippet" style="background: #282c34; color: #abb2bf; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.9rem;">
-            <code>curl -fsSL https://raw.githubusercontent.com/flightagent/fagent/main/scripts/install.sh | bash</code>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="section blog-home border-top" id="blog">
-  <div class="container">
-    
-    <div class="row justify-content-center">
-      <div class="col-lg-6">
-        <div class="section-heading text-center">
-          <h2 class="text-lg mb-3">News</h2>
-          <p></p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row">
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-      <div class="blog-item card mb-4 border-0">
-  <img src="/images/blog/compass-blog.png" alt="External mini screens for compass and yaw damper" class="img-fluid w-100">
-  <div class="blog-item-content p-4">
-    <div class="blog-meta mb-2">
-      <span><i class="ti-time mr-2"></i>18 Dec, 2020</span> <i class="ti-user ml-2"></i>
-      Flightagent
-    </div>
-    <h4 class="mt-2 mb-3"><a href="https://flightagent.github.io/blog/mini-screens/">External mini screens for compass and yaw damper</a></h4>
-  </div>
-</div>
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-      <div class="blog-item card mb-4 border-0">
-  <img src="/images/blog/blog1.jpg" alt="FA ShowTV" class="img-fluid w-100">
-  <div class="blog-item-content p-4">
-    <div class="blog-meta mb-2">
-      <span><i class="ti-time mr-2"></i>18 Dec, 2020</span> <i class="ti-user ml-2"></i>
-      Flightagent
-    </div>
-    <h4 class="mt-2 mb-3"><a href="https://flightagent.github.io/blog/showtv/">FA ShowTV</a></h4>
-  </div>
-</div>
-      </div>
-      
-      <div class="col-lg-4 col-md-6 col-sm-6">
-      <div class="blog-item card mb-4 border-0">
-  <img src="/images/blog/remote-blog.png" alt="Remote android application" class="img-fluid w-100">
-  <div class="blog-item-content p-4">
-    <div class="blog-meta mb-2">
-      <span><i class="ti-time mr-2"></i>18 Dec, 2020</span> <i class="ti-user ml-2"></i>
-      Flightagent
-    </div>
-    <h4 class="mt-2 mb-3"><a href="https://flightagent.github.io/blog/mobile-app/">Remote android application</a></h4>
-  </div>
-</div>
-      </div>
-      
-    </div>
-    <div class="text-center mt-5">
-      <a href="/blog" class="btn btn-main">All Posts</a>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<section class="section contact bg-grey" id="contact">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-12 col-lg-8">
-        <div class="section-heading text-center">
-          <h2 class="mb-2 text-lg">Contact Us</h2>
-          <p>Whether you have questions or you would just like to say hello, contact us.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      
-      <div class="col-lg-4 col-sm-6">
-        <div class="contact-info-block text-center mb-4">
-          <i class="ti-email"></i>
-          <p class="mb-0">Email</p>
-          
-          <h5>flightagent.pro@gmail.com</h5>
-          
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="row footer-btm mt-5 pt-4 border-top">
-      <div class="col-lg-6">
-        
-        <p class="footer-copy">
-          Copyright © 2021 FlightAgent All Rights Reserved
-        </p>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- JS Plugins -->
-
-<script src="https://flightagent.github.io/plugins/jQuery/jquery.min.js"></script>
-
-<script src="https://flightagent.github.io/plugins/bootstrap/bootstrap.min.js"></script>
-
-<script src="https://flightagent.github.io/plugins/slick/slick.min.js"></script>
-
-<script src="https://flightagent.github.io/plugins/magnific-popup/magnific-popup.min.js"></script>
-
-
-
-<script type="text/javascript" id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
-  data-api-key="M2E5YjA3NjMtYzRiYS00YzVjLWEyYWYtNDY5ZDI0OWZhYjg5"></script>
-<script>
-  Snipcart.execute('registerLocale', 'en', {
-    powered_by: "Themefisher"
-  });
-</script>
-
-<!-- Main Script -->
-
-<script src="https://flightagent.github.io/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
-<div id="js-cookie-box" class="cookie-box cookie-box-hide">
-	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-main ml-2">I Accept</span>
-</div>
-<script>
-	(function ($) {
-		const cookieBox = document.getElementById('js-cookie-box');
-		const cookieButton = document.getElementById('js-cookie-button');
-		if (!Cookies.get('cookie-box')) {
-			cookieBox.classList.remove('cookie-box-hide');
-			cookieButton.onclick = function () {
-				Cookies.set('cookie-box', true, {
-					expires:  2 
-				});
-				cookieBox.classList.add('cookie-box-hide');
-			};
-		}
-	})(jQuery);
-</script>
-
-
-<style>
-.cookie-box {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  z-index: 9999;
-  padding: 1rem 2rem;
-  background: rgb(71, 71, 71);
-  transition: all .75s cubic-bezier(.19, 1, .22, 1);
-  color: #fdfdfd;
-}
-
-.cookie-box-hide {
-  display: none;
-}
-</style>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>
