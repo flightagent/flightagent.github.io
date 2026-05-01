@@ -379,6 +379,62 @@
   </div>
 </section>
 
+<section class="section bg-grey" id="quick-install">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <div class="section-heading">
+          <h2 class="text-lg">Command Line Installation</h2>
+          <p>Install Flight Agent with a single command. This will download the latest version, add it to your PATH, and configure autostart.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="service-block mb-4">
+          <i class="ti-microsoft text-danger"></i>
+          <h4 class="mb-3 mt-4">Windows (PowerShell)</h4>
+          <div class="code-snippet" style="background: #282c34; color: #abb2bf; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.9rem; position: relative;">
+            <code id="win-cmd">irm https://raw.githubusercontent.com/flightagent/fagent/main/scripts/install.ps1 | iex</code>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="service-block mb-4">
+          <i class="ti-linux text-danger"></i>
+          <h4 class="mb-3 mt-4">Linux / macOS (Bash)</h4>
+          <div class="code-snippet" style="background: #282c34; color: #abb2bf; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.9rem;">
+            <code>curl -fsSL https://raw.githubusercontent.com/flightagent/fagent/main/scripts/install.sh | bash</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-lg-12">
+        <div class="section-heading text-center">
+          <h3 class="mb-4">For Developers</h3>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <div class="service-block">
+              <i class="ti-github text-danger"></i>
+              <h4 class="mb-3 mt-4">Clone & Build</h4>
+              <p>Get the source code and build it locally:</p>
+              <div class="code-snippet" style="background: #282c34; color: #abb2bf; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.8rem; text-align: left;">
+                <pre style="color: inherit; margin: 0;">git clone https://github.com/flightagent/fagent.git
+cd fagent
+make build</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 
