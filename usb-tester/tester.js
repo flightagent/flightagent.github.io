@@ -30,6 +30,9 @@ if (!navigator.usb && !navigator.getGamepads) {
     btnConnect.disabled = true;
 }
 
+// Track axis activity to hide non-existent ones
+let axisActivity = new Map(); // Key: gamepad-index-axisIndex, Value: boolean (hasMoved)
+
 function updateDeviceList() {
     let usbDevices = [];
     if (navigator.usb) {
@@ -74,30 +77,34 @@ function getAxisName(idx) {
 
 function renderDevices(usbDevices, gamepads) {
     deviceGrid.innerHTML = '';
-    const seenKeys = new Set();
+    
+    // Improved deduplication: track by VID/PID to avoid showing the same physical device twice
+    const seenUsbKeys = new Set();
+    const gamepadsByVidPid = new Map();
 
-    gamepads.forEach((gp, index) => {
+    gamepads.forEach((gp) => {
         const { vid, pid } = parseGamepadId(gp.id);
-        const key = `gp-${gp.index}-${vid}-${pid}`;
-        seenKeys.add(key);
-
+        const key = `gp-${vid}-${pid}`;
+        seenUsbKeys.add(`${vid}-${pid}`); // Mark this hardware as seen
+        
         const mapping = findMapping(vid, pid);
         const name = mapping ? mapping.name : gp.id.split('(')[0].trim();
         const image = mapping ? `../${mapping.image}` : `../${FALLBACK_IMAGE}`;
 
-        const card = createDeviceCard(key, name, image, vid, pid, gp);
+        const card = createDeviceCard(`gp-${gp.index}`, name, image, vid, pid, gp);
         deviceGrid.appendChild(card);
     });
 
     usbDevices.forEach(device => {
-        const key = `usb-${device.vendorId}-${device.productId}-${device.serialNumber || ''}`;
-        if (seenKeys.has(key)) return;
+        const key = `${device.vendorId}-${device.productId}`;
+        // If we already saw this hardware as a gamepad, skip the "dumb" USB entry
+        if (seenUsbKeys.has(key)) return;
 
         const mapping = findMapping(device.vendorId, device.productId);
         const name = mapping ? mapping.name : (device.productName || "Unknown USB Device");
         const image = mapping ? `../${mapping.image}` : `../${FALLBACK_IMAGE}`;
 
-        const card = createDeviceCard(key, name, image, device.vendorId, device.productId, null);
+        const card = createDeviceCard(`usb-${device.vendorId}-${device.productId}`, name, image, device.vendorId, device.productId, null);
         deviceGrid.appendChild(card);
     });
 
@@ -109,25 +116,29 @@ function renderDevices(usbDevices, gamepads) {
     }
 }
 
-function createDeviceCard(key, name, image, vid, pid, gamepad) {
+function createDeviceCard(id, name, image, vid, pid, gamepad) {
     const card = document.createElement('div');
     card.className = 'device-card';
-    card.id = key;
+    card.id = id;
     
     let inputHtml = '';
     if (gamepad) {
         inputHtml = `
             <div class="device-inputs" id="inputs-${gamepad.index}" style="width: 100%;">
-                <div class="axes-container">
-                    ${gamepad.axes.map((val, i) => `
-                        <div class="axis-group">
-                            <div class="axis-name">${getAxisName(i)}</div>
-                            <div class="axis-bar-v">
-                                <div class="axis-fill-v" id="axis-${gamepad.index}-${i}" style="height: 50%"></div>
+                <div class="axes-container" id="axes-container-${gamepad.index}">
+                    ${gamepad.axes.map((val, i) => {
+                        const axisKey = `${gamepad.index}-${i}`;
+                        const isVisible = axisActivity.get(axisKey) || false;
+                        return `
+                            <div class="axis-group" id="axis-group-${gamepad.index}-${i}" style="display: ${isVisible ? 'flex' : 'none'}">
+                                <div class="axis-name">${getAxisName(i)}</div>
+                                <div class="axis-bar-v">
+                                    <div class="axis-fill-v" id="axis-fill-${gamepad.index}-${i}" style="height: 50%"></div>
+                                </div>
+                                <div class="axis-value" id="axis-val-${gamepad.index}-${i}">${val.toFixed(2)}</div>
                             </div>
-                            <div class="axis-value" id="val-${gamepad.index}-${i}">${val.toFixed(2)}</div>
-                        </div>
-                    `).join('')}
+                        `;
+                    }).join('')}
                 </div>
                 <div class="buttons-container">
                     ${gamepad.buttons.map((_, i) => `
@@ -160,8 +171,18 @@ function updateGamepadValues() {
 
         // Update axes
         gp.axes.forEach((val, axisIdx) => {
-            const fillEl = document.getElementById(`axis-${gp.index}-${axisIdx}`);
-            const valEl = document.getElementById(`val-${gp.index}-${axisIdx}`);
+            const axisKey = `${gp.index}-${axisIdx}`;
+            
+            // Detection: if value is non-zero or has moved, mark as active
+            if (!axisActivity.has(axisKey) && Math.abs(val) > 0.05) {
+                axisActivity.set(axisKey, true);
+                const groupEl = document.getElementById(`axis-group-${gp.index}-${axisIdx}`);
+                if (groupEl) groupEl.style.display = 'flex';
+            }
+
+            const fillEl = document.getElementById(`axis-fill-${gp.index}-${axisIdx}`);
+            const valEl = document.getElementById(`axis-val-${gp.index}-${axisIdx}`);
+            
             if (fillEl) {
                 const percentage = ((val + 1) / 2) * 100;
                 fillEl.style.height = `${percentage}%`;
@@ -202,12 +223,10 @@ btnConnect.addEventListener('click', async () => {
 updateDeviceList();
 
 window.addEventListener("gamepadconnected", (e) => {
-    console.log("Gamepad connected", e.gamepad);
     updateDeviceList();
 });
 
 window.addEventListener("gamepaddisconnected", (e) => {
-    console.log("Gamepad disconnected", e.gamepad);
     updateDeviceList();
 });
 
