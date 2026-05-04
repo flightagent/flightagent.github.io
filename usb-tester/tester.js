@@ -52,8 +52,31 @@ function updateDeviceList() {
     }
 }
 
-function findMapping(vid, pid) {
-    return DEVICE_MAPPINGS.find(m => m.vid === vid && m.pid === pid);
+function findMapping(vid, pid, name, vendorName) {
+    // 1. Precise VID/PID match
+    const precise = DEVICE_MAPPINGS.find(m => m.vid === vid && m.pid === pid);
+    if (precise) return precise;
+
+    const n = (name || "").toLowerCase();
+    const vn = (vendorName || "").toLowerCase();
+
+    // 2. Vendor ID fallback (Jabra)
+    if (vid === 0x0b0e) {
+        return { name: name || "Jabra Device", image: "images/devices/jabra-speak-510.png" };
+    }
+
+    // 3. Name based fallbacks
+    if (n.includes("jabra") || vn.includes("jabra")) {
+        return { name: name || "Jabra Device", image: "images/devices/jabra-speak-510.png" };
+    }
+    if (n.includes("bodnar") || vn.includes("bodnar")) {
+        if (n.includes("bu0836x")) return { name: "Leo Bodnar BU0836X", image: "images/devices/bodnar_bu0386x.png" };
+        return { name: "Leo Bodnar BU0836", image: "images/devices/bodnar_bu0386.png" };
+    }
+    if (n.includes("t.16000m")) return { name: "Thrustmaster T.16000M", image: "images/devices/tm_t16000m.png" };
+    if (n.includes("warthog")) return { name: "Thrustmaster Warthog", image: "images/devices/tm_warthog.png" };
+
+    return null;
 }
 
 function parseGamepadId(id) {
@@ -80,15 +103,15 @@ function renderDevices(usbDevices, gamepads) {
     
     // Improved deduplication: track by VID/PID to avoid showing the same physical device twice
     const seenUsbKeys = new Set();
-    const gamepadsByVidPid = new Map();
 
     gamepads.forEach((gp) => {
         const { vid, pid } = parseGamepadId(gp.id);
         const key = `gp-${vid}-${pid}`;
         seenUsbKeys.add(`${vid}-${pid}`); // Mark this hardware as seen
         
-        const mapping = findMapping(vid, pid);
-        const name = mapping ? mapping.name : gp.id.split('(')[0].trim();
+        const nameFromId = gp.id.split('(')[0].trim();
+        const mapping = findMapping(vid, pid, nameFromId, "");
+        const name = mapping ? mapping.name : nameFromId;
         const image = mapping ? `../${mapping.image}` : `../${FALLBACK_IMAGE}`;
 
         const card = createDeviceCard(`gp-${gp.index}`, name, image, vid, pid, gp);
@@ -100,7 +123,7 @@ function renderDevices(usbDevices, gamepads) {
         // If we already saw this hardware as a gamepad, skip the "dumb" USB entry
         if (seenUsbKeys.has(key)) return;
 
-        const mapping = findMapping(device.vendorId, device.productId);
+        const mapping = findMapping(device.vendorId, device.productId, device.productName, device.manufacturerName);
         const name = mapping ? mapping.name : (device.productName || "Unknown USB Device");
         const image = mapping ? `../${mapping.image}` : `../${FALLBACK_IMAGE}`;
 
