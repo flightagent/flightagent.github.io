@@ -111,6 +111,7 @@
                         <i class="ti-hummer"></i>
                         <h3>Cockpit Hardware</h3>
                         <p>Directly connect pedals, throttles, and custom buttons to your system.</p>
+                        <a href="usb-tester/" class="btn btn-outline" style="padding: 0.2rem 0.5rem; font-size: 0.8rem; margin-top: 0.5rem; display: inline-block;">Test Hardware</a>
                     </div>
                     <div class="feature-card reveal">
                         <i class="ti-package"></i>
@@ -131,14 +132,14 @@
                         <div>
                             <h4>Windows (PowerShell)</h4>
                             <div class="code-container">
-                                <code id="win-cmd">irm https://raw.githubusercontent.com/flightagent/fagent/main/scripts/install.ps1 | iex</code>
+                                <code id="win-cmd">irm https://github.com/flightagent/releases/releases/latest/download/install.ps1 | iex</code>
                                 <button class="copy-btn" onclick="copyToClipboard('win-cmd')"><i class="ti-clipboard"></i></button>
                             </div>
                         </div>
                         <div>
                             <h4>Linux / macOS (Bash)</h4>
                             <div class="code-container">
-                                <code id="nix-cmd">curl -fsSL https://raw.githubusercontent.com/flightagent/fagent/main/scripts/install.sh | bash</code>
+                                <code id="nix-cmd">curl -fsSL https://github.com/flightagent/releases/releases/latest/download/install.sh | bash</code>
                                 <button class="copy-btn" onclick="copyToClipboard('nix-cmd')"><i class="ti-clipboard"></i></button>
                             </div>
                         </div>
